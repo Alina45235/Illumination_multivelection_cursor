@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Задания 2-8</title>
+</head>
+<body>
+    <header>
+        <h1>Практические задания</h1>
+        <a href="mouse.html" class="main-btn">Задание 1: Координаты мыши →</a>
+    </header>
+
+    <main>
+        <!-- Задание 2 -->
+        <section class="task-card">
+            <h2>Задание 2: Подсветка ячеек таблицы</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr><th>Имя</th><th>Возраст</th><th>Город</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Анна</td><td>25</td><td>Москва</td></tr>
+                    <tr><td>Борис</td><td>30</td><td>Лондон</td></tr>
+                    <tr><td>Виктор</td><td>28</td><td>Париж</td></tr>
+                    <tr><td>Дарья</td><td>22</td><td>Берлин</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Задание 3 -->
+        <section class="task-card">
+            <h2>Задание 3: Выбор книг (Ctrl+клик, Shift+клик)</h2>
+            <ol class="book-list">
+                <li>"JavaScript for Kids: A Playful Introduction to Programming" by Nick Morgan</li>
+                <li>"Eloquent JavaScript: A Modern Introduction to Programming" by Marijn Haverbeke</li>
+                <li>"JavaScript: The Good Parts" by Douglas Crockford</li>
+                <li>"You Don't Know JS" by Kyle Simpson</li>
+                <li>"Programming JavaScript Applications" by Eric Elliott</li>
+                <li>"Effective JavaScript: 68 Specific Ways" by David Herman</li>
+                <li>"JavaScript: The Definitive Guide" by David Flanagan</li>
+            </ol>
+        </section>
+
+        <!-- Задание 4 -->
+        <section class="task-card">
+            <h2>Задание 4: Цветные блоки</h2>
+            <button id="addBlockBtn" class="colorful-btn">➕ Add block</button>
+            <div class="blocks-container"></div>
+        </section>
+
+        <!-- Задание 5 -->
+        <section class="task-card">
+            <h2>Задание 5: Дерево папок</h2>
+            <div class="tree-container">
+                <ul class="folder-tree">
+                    <li>
+                        <span class="folder">📁 This PC</span>
+                        <ul>
+                            <li>
+                                <span class="folder">📁 Local Disk (C:)</span>
+                                <ul>
+                                    <li><span class="file">📄 Program Files</span></li>
+                                    <li><span class="file">📄 Users</span></li>
+                                    <li><span class="file">📄 Windows</span></li>
+                                    <li><span class="file">📄 System32</span></li>
+                                    <li><span class="file">📄 Documents</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="folder">📁 Local Disk (D:)</span>
+                                <ul>
+                                    <li><span class="file">📄 New Folder 1</span></li>
+                                    <li><span class="file">📄 New Folder 2</span></li>
+                                    <li><span class="file">📄 New Folder 3</span></li>
+                                    <li><span class="file">📄 Movies</span></li>
+                                    <li><span class="file">📄 Music</span></li>
+                                    <li><span class="file">📄 Photos</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="folder">📁 Local Disk (E:)</span>
+                                <ul>
+                                    <li><span class="file">📄 Backup</span></li>
+                                    <li><span class="file">📄 Projects</span></li>
+                                    <li><span class="file">📄 Downloads</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Задание 6 -->
+        <section class="task-card">
+            <h2>Задание 6: Калькулятор</h2>
+            <div class="calculator">
+                <div class="calc-display">
+                    <div class="previous-operand"></div>
+                    <div class="current-operand">0</div>
+                </div>
+                <div class="calc-buttons">
+                    <button data-action="clear">C</button>
+                    <button data-action="delete">⌫</button>
+                    <button data-action="divide">÷</button>
+                    <button data-action="multiply">×</button>
+                    
+                    <button data-number="7">7</button>
+                    <button data-number="8">8</button>
+                    <button data-number="9">9</button>
+                    <button data-action="subtract">−</button>
+                    
+                    <button data-number="4">4</button>
+                    <button data-number="5">5</button>
+                    <button data-number="6">6</button>
+                    <button data-action="add">+</button>
+                    
+                    <button data-number="1">1</button>
+                    <button data-number="2">2</button>
+                    <button data-number="3">3</button>
+                    <button data-action="equals" class="equals-btn">=</button>
+                    
+                    <button data-number="0" class="zero-btn">0</button>
+                    <button data-number=".">.</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Задание 7 -->
+        <section class="task-card no-select-section">
+            <h2>Задание 7: Запрет выделения текста</h2>
+            <div class="protected-content">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <div class="test-box">
+                    <p>Попробуйте выделить этот текст или вызвать контекстное меню</p>
+                    <input type="text" class="protected-input" placeholder="Попробуйте вставить текст (Ctrl+V)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Задание 8 -->
+        <section class="task-card">
+            <h2>Задание 8: Игра в фанты</h2>
+            <div class="game-controls">
+                <button id="addPlayersBtn" class="game-btn green">➕ Добавить игроков</button>
+                <button id="startGameBtn" class="game-btn blue">🎮 Начать игру</button>
+                <button id="resetGameBtn" class="game-btn red">🔄 Сбросить</button>
+            </div>
+            
+            <div class="game-info">
+                <div class="players-box">
+                    <h3>Участники:</h3>
+                    <div id="playersList" class="players-list">
+                        <p class="empty-msg">Игроки не добавлены</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <p>Всего: <span id="totalPlayers">0</span></p>
+                    <p>Осталось: <span id="remainingPlayers">0</span></p>
+                </div>
+            </div>
+            
+            <div class="selection-area">
+                <div class="selected-player-container">
+                    <h3>🎲 Выбранный игрок:</h3>
+                    <div id="selectedPlayer" class="selected-player">—</div>
+                    <button id="choosePlayerBtn" class="choose-btn" disabled>ВЫБРАТЬ</button>
+                </div>
+                
+                <div class="eliminated-box">
+                    <h3>Выбывшие:</h3>
+                    <div id="eliminatedPlayers" class="eliminated-list">
+                        <p class="empty-msg">Пока никого</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="history-box">
+                <h3>История выборов:</h3>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
