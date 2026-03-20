@@ -1,0 +1,600 @@
+/* === ОБЩИЕ СТИЛИ === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* === КАРТОЧКИ ЗАДАНИЙ === */
+.task-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 1.8rem;
+}
+
+/* === ЗАДАНИЕ 1: СТРАНИЦА С МЫШЬЮ === */
+.mouse-page {
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.back-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mouse-area {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: crosshair;
+}
+
+.coord-display {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  min-width: 180px;
+  text-align: center;
+}
+
+/* === ЗАДАНИЕ 2: ТАБЛИЦА === */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.styled-table th {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 18px 15px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+}
+
+.styled-table td {
+  padding: 16px 15px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.styled-table tr:hover td {
+  background: #f8f9ff;
+}
+
+.styled-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* === ЗАДАНИЕ 3: СПИСОК КНИГ === */
+.book-list {
+  list-style: decimal inside;
+  padding: 0;
+}
+
+.book-list li {
+  background: #f8f9ff;
+  margin: 10px 0;
+  padding: 18px 25px;
+  border-radius: 12px;
+  border-left: 5px solid #a78bfa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-list li:hover {
+  background: #edf2ff;
+  transform: translateX(10px);
+}
+
+.book-list li.selected {
+  background: linear-gradient(90deg, #fff9e6, #ffeaa7);
+  color: #d97706;
+  border-left: 5px solid #f59e0b;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
+}
+
+/* === ЗАДАНИЕ 4: ЦВЕТНЫЕ БЛОКИ === */
+.colorful-btn {
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  margin-bottom: 20px;
+}
+
+.colorful-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 15px;
+  min-height: 150px;
+  border: 2px dashed #cbd5e1;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.block:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* === ЗАДАНИЕ 5: ДЕРЕВО ПАПОК === */
+.tree-container {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+}
+
+.folder-tree {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+
+.folder-tree ul {
+  list-style: none;
+  padding-left: 30px;
+  display: none;
+  margin-top: 8px;
+}
+
+.folder-tree li.open > ul {
+  display: block;
+}
+
+.folder-tree li {
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.folder,
+.file {
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-width: 250px;
+}
+
+.folder {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+  border-left: 4px solid #0ea5e9;
+}
+
+.file {
+  background: #f0f9ff;
+  color: #475569;
+  border-left: 4px solid #94a3b8;
+}
+
+.folder:hover,
+.file:hover {
+  background: #dbeafe;
+  transform: translateX(5px);
+  font-weight: 600;
+}
+
+/* === ЗАДАНИЕ 6: КАЛЬКУЛЯТОР === */
+.calculator {
+  max-width: 350px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+}
+
+.calc-display {
+  background: #1e293b;
+  color: white;
+  padding: 25px;
+  text-align: right;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.previous-operand {
+  font-size: 1rem;
+  color: #94a3b8;
+  min-height: 24px;
+  margin-bottom: 5px;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e2e8f0;
+}
+
+.calc-buttons button {
+  border: none;
+  padding: 22px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-buttons button:hover {
+  background: #f1f5f9;
+}
+
+.calc-buttons button[data-action] {
+  background: #f8fafc;
+  color: #0ea5e9;
+}
+
+.calc-buttons button[data-action="clear"],
+.calc-buttons button[data-action="delete"] {
+  color: #ef4444;
+}
+
+.calc-buttons .equals-btn {
+  background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+  color: white;
+  grid-row: span 2;
+}
+
+.calc-buttons .zero-btn {
+  grid-column: span 2;
+}
+
+/* === ЗАДАНИЕ 7: ЗАПРЕТ ВЫДЕЛЕНИЯ === */
+.no-select-section {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-left-color: #f59e0b;
+}
+
+.protected-content {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.protected-content h3 {
+  color: #d97706;
+  margin-bottom: 15px;
+}
+
+.test-box {
+  margin-top: 25px;
+  padding: 20px;
+  background: #fffbeb;
+  border-radius: 10px;
+  border: 2px solid #fbbf24;
+}
+
+.protected-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #fbbf24;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fef3c7;
+}
+
+/* === ЗАДАНИЕ 8: ИГРА В ФАНТЫ === */
+.game-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.game-btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn.green {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+.game-btn.blue {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+.game-btn.red {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.game-info {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.players-box,
+.stats-box {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stats-box {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  border: 2px solid #0ea5e9;
+}
+
+.stats-box p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin: 15px 0;
+}
+
+.players-list {
+  min-height: 150px;
+}
+
+.player-item {
+  padding: 12px 15px;
+  margin: 8px 0;
+  background: #f0f9ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #10b981;
+}
+
+.player-eliminated {
+  background: #fef2f2;
+  border-left-color: #ef4444;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.selection-area {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.selected-player-container {
+  flex: 2;
+  min-width: 400px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+}
+
+.selected-player {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-btn {
+  padding: 18px 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #fbbf24;
+  color: #78350f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+  margin-top: 20px;
+}
+
+.choose-btn:hover:not(:disabled) {
+  background: #f59e0b;
+  transform: scale(1.05);
+}
+
+.eliminated-box {
+  flex: 1;
+  min-width: 250px;
+  background: #fffbeb;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #fbbf24;
+}
+
+.eliminated-player {
+  padding: 10px 15px;
+  margin: 8px 0;
+  background: #fef3c7;
+  border-radius: 8px;
+  color: #92400e;
+}
+
+.history-box {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.history-item {
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #8b5cf6;
+}
+
+.empty-msg {
+  color: #94a3b8;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
